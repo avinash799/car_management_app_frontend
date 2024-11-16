@@ -1,38 +1,79 @@
+/* General App Styles */
 .App {
   text-align: center;
 }
 
+/* Logo Styles */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 10vmin; /* Size of the logo */
+  pointer-events: none; /* Disable click events */
+  margin-bottom: 20px; /* Spacing below the logo */
 }
 
+/* Animation for Logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Spin animation */
   }
 }
 
+/* Header Styling */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #282c34; /* Dark background for header */
+  min-height: 100vh; /* Full screen height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); /* Responsive font size */
   color: white;
+  padding: 20px; /* Padding around the content */
+  text-align: center;
 }
 
+/* Link Styling */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Light blue color for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
+/* Hover effect for links */
+.App-link:hover {
+  color: #21a1f1; /* Slightly darker blue on hover */
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Keyframes for spinning logo */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Start from 0 degrees */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* End at 360 degrees */
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 15vmin; /* Adjust logo size for smaller screens */
+  }
+
+  .App-header {
+    font-size: calc(12px + 2vmin); /* Slightly larger font on mobile */
+    padding: 15px; /* Less padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-logo {
+    height: 20vmin; /* Further reduce the logo size on very small screens */
+  }
+
+  .App-header {
+    font-size: calc(14px + 2vmin); /* Adjust font for small screens */
+    padding: 10px; /* Reduce padding */
   }
 }
